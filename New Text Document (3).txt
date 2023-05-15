@@ -1,0 +1,12 @@
+def solution(A, K):
+    if not A:
+        return A
+    
+    N = len(A)
+    K = K % N  
+    
+    if K == 0:
+        return A
+    
+    rotated = A[-K:] + A[:-K]
+    return rotated
